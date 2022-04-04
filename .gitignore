@@ -1,0 +1,8 @@
+dist/
+__pycache__/
+.vscode
+.coverage
+.direnv
+.envrc
+*.egg
+*.egg-info

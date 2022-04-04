@@ -1,0 +1,22 @@
+{% if messages %}
+  <ul class="django_messages_display_messages_container">
+    {% for message in messages %}
+      <li class="django_messages_display_message {% if message.tags %}{{ message.tags }}{% endif %} hidden">
+        <p>{{ message }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <script>
+    message_elements = document.querySelectorAll('.django_messages_display_messages_container li')
+    message_elements.forEach(function(element, index) {
+      setTimeout(function() {
+        element.classList.remove('hidden');  
+      }, index*75);
+
+      setTimeout(function() {
+        element.classList.add('hidden');  
+      }, (index*75) + 5000);
+    })
+  </script>
+{% endif %}

@@ -1,0 +1,63 @@
+.django_messages_display_messages_container {
+    list-style-type: none;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: 20rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.django_messages_display_messages_container > li {
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    transition: opacity 0.3s linear, transform 0.3s ease-out;
+}
+
+.django_messages_display_messages_container > li.hidden {
+    opacity: 0;
+    transform: translate(3em,0);
+}
+
+.django_messages_display_messages_container > li.success {
+    background-color: #3F7B4B;
+    color: rgb(245 245 245);
+}
+
+.django_messages_display_messages_container > li.info {
+    background-color: #396CCF;
+    color: rgb(245 245 245);
+}
+
+.django_messages_display_messages_container > li.warning {
+    background-color: rgb(255, 217, 61);
+    color: rgb(65 65 65);
+}
+
+.django_messages_display_messages_container > li.error {
+    background-color: #E04242;
+    color: rgb(245, 245, 245);
+}
+
+.django_messages_display_messages_container > li > p {
+    padding: 0.05rem 1rem;
+}
+
+.django_messages_display_messages_container > li > button {
+    all: unset;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.django_messages_display_messages_container > li > button > svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
