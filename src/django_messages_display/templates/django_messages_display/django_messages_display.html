@@ -1,8 +1,10 @@
+{% load django_messages_display_tags %}
 {% if messages %}
   <ul class="django_messages_display_messages_container">
     {% for message in messages %}
       <li class="django_messages_display_message {% if message.tags %}{{ message.tags }}{% endif %} hidden">
         <p>{{ message }}</p>
+        {% close_button_element %}
       </li>
     {% endfor %}
   </ul>
@@ -18,5 +20,9 @@
         element.classList.add('hidden');  
       }, (index*75) + 5000);
     })
+
+    function close_message(button_element) {
+      button_element.parentElement.classList.add('hidden')
+    }
   </script>
 {% endif %}
