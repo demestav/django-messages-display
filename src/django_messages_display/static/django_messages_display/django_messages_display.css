@@ -43,8 +43,8 @@
 }
 
 .django_messages_display_messages_container>li.error {
-    background-color: #E04242;
-    color: rgb(245, 245, 245);
+    background-color: #BC0000;
+    color: #EAE9E9;
 }
 
 .django_messages_display_messages_container>li>p {
