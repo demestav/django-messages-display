@@ -2,7 +2,7 @@
 {% if messages %}
   <ul class="django_messages_display_messages_container">
     {% for message in messages %}
-      <li class="django_messages_display_message {% if message.tags %}{{ message.tags }}{% endif %} hidden">
+      <li role="status" aria-live="polite" class="django_messages_display_message {% if message.tags %}{{ message.tags }}{% endif %} hidden">
         <p>{{ message }}</p>
         {% close_button_element %}
       </li>

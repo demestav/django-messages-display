@@ -1,8 +1,6 @@
 # django-messages-display
 Display messages from django.contrib.messages as notifications in the browser.
 
-The colors used for the notifications, meet the WCAG (2.1) AA contrast levels.
-
 ## Setup
 Install package using `pip`:
 
@@ -35,3 +33,9 @@ Further, for the styling to apply, the CSS should be loaded:
     <link rel="stylesheet" href="{% static 'django_messages_display/django_messages_display.css' %}">
 </head>
 ```
+
+## Accessibility
+Notifications have the relevant attributes, so that the screen reader announces each one without interrupting the users' flow.
+Even though visually the notifications disappear after a certain amount of time, they remain in the document in order to be accessible by the screen reader on demand.
+
+The colors used for the notifications, meet the WCAG (2.1) AA contrast levels.

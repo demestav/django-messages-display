@@ -28,6 +28,10 @@
     transform: translate(3em, 0);
 }
 
+.django_messages_display_messages_container>li.hidden>button {
+    visibility: hidden;
+}
+
 .django_messages_display_messages_container>li.success {
     background-color: hsl(132, 32%, 36%);
     color: hsl(0, 0%, 96%);
