@@ -64,6 +64,12 @@ To include a close button for each message, add the following to your Django set
 DJANGO_MESSAGES_DISPLAY_CLOSE_BUTTON = True
 ```
 
+To change message display delay from default 5000ms, add the following to your Django settings:
+```python
+DJANGO_MESSAGES_DISPLAY_DELAY = 10000
+```
+
+
 ## Accessibility
 The notifications have the relevant attributes so that screen readers announce each one without interrupting the user's flow.
 Even though the notifications visually disappear after a certain amount of time, they remain in the document to be accessible by screen readers on demand.

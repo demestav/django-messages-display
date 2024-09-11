@@ -10,10 +10,15 @@ def django_messages_display(context):
     include_close_button = getattr(
         settings, "DJANGO_MESSAGES_DISPLAY_CLOSE_BUTTON", None
     )
+
+    delay = getattr(
+        settings, "DJANGO_MESSAGES_DISPLAY_DELAY", None
+    )
     messages = context.get('messages', [])
     
     render_context = {
         "include_close_button": include_close_button,
+        "delay": delay,
         "messages": messages,
     }
     

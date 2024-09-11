@@ -24,7 +24,7 @@
 
       messageElements.forEach((element, index) => {
         const showDelay = index * 75;
-        const hideDelay = showDelay + 5000;
+        const hideDelay = showDelay + {% if delay %}{{ delay }}{% else %}5000{% endif %};
 
         setTimeout(() => {
           element.classList.remove('hidden');
